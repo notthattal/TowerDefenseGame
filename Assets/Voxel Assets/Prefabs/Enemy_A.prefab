@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4186752768196848}
   - component: {fileID: 33557114771315490}
   - component: {fileID: 23293524098885882}
+  - component: {fileID: 5156211821315922074}
   m_Layer: 0
   m_Name: Enemy_A
   m_TagString: Untagged
@@ -79,3 +80,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5156211821315922074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670769832628526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 979feba9f3375491793c75c77d93b64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathFX: {fileID: 3936958888290242672, guid: c5678dfaa27ea412b80e9a53cfff2266, type: 3}
+  parent: {fileID: 0}
+  hitpoints: 5
