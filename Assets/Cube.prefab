@@ -212,9 +212,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7618071162254481587}
   - component: {fileID: 7636804959577608239}
-  - component: {fileID: 553365099}
+  - component: {fileID: 6865844778659752706}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: 0,0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridSize: 10
---- !u!114 &553365099
+--- !u!114 &6865844778659752706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -262,10 +262,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7618071162254481586}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 426c4932225cd4af382dc3d09961eee2, type: 3}
+  m_Script: {fileID: 11500000, guid: a5601d93180e84cb381d216c7d8daeef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: 10
 --- !u!1 &7618071162471483584
 GameObject:
   m_ObjectHideFlags: 0
