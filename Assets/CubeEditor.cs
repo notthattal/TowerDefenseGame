@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [ExecuteInEditMode]
-[SelectionBase]
 [RequireComponent(typeof(Waypoint))]
+[SelectionBase]
 public class CubeEditor : MonoBehaviour
 {
 
