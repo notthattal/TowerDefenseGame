@@ -188,7 +188,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5338449316500821594}
-  m_Text: -4,4
+  m_Text: -7,-1
   m_OffsetZ: 0
   m_CharacterSize: 0.06
   m_LineSpacing: 1
@@ -213,8 +213,9 @@ GameObject:
   - component: {fileID: 6352029949745745874}
   - component: {fileID: 4936712158252587921}
   - component: {fileID: 4123787089821808680}
+  - component: {fileID: 4188141445930668187}
   m_Layer: 0
-  m_Name: -4,4
+  m_Name: Enemy Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -227,7 +228,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9075201674540731657}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -40, y: 0, z: 40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -261,7 +262,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wasExplored: 0
+  isPlaceable: 1
+  towerWasPlaced: 0
   exploredFrom: {fileID: 0}
+  tower: {fileID: 7868858857502307154, guid: 2208c630b39f144009f507acc99aed00, type: 3}
+--- !u!65 &4188141445930668187
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9075201674540731657}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: -5, z: 0}
 --- !u!1001 &4843318419151637121
 PrefabInstance:
   m_ObjectHideFlags: 0

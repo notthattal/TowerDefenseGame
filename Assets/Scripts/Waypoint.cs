@@ -9,7 +9,11 @@ public class Waypoint : MonoBehaviour
 
     //public okay as is data class
     public bool wasExplored = false;
+    public bool isPlaceable = true;
+    public bool towerWasPlaced = false;
     public Waypoint exploredFrom = default;
+
+    [SerializeField] Tower towerPrefab = default;
 
     public int GetGridSize()
     {
@@ -32,5 +36,33 @@ public class Waypoint : MonoBehaviour
             topMeshRenderer.material.color = color;
         }
         catch { }
+    }
+
+    private void SpawnTowers()
+    {
+        if (towerWasPlaced == false && towerPrefab)
+        {
+            Instantiate(towerPrefab, transform.position, Quaternion.identity);
+            towerWasPlaced = true;
+        }
+        else
+        {
+            print("Cannot place tower here");
+        }
+    }
+
+    void OnMouseOver()
+    {
+        if (Input.GetMouseButtonDown(0)) // Left click
+        {
+            if (isPlaceable)
+            {
+                SpawnTowers();
+            }
+            else
+            {
+                print("Cannot place tower here");
+            }
+        }
     }
 }

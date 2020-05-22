@@ -7,7 +7,7 @@ public class EnemyDamage : MonoBehaviour
 {
 
     [SerializeField] GameObject deathFX = default;
-    [SerializeField] Transform parent = default;
+    [SerializeField] ParticleSystem hitParticles = default;
 
     [SerializeField] int hitpoints = 5;
 
@@ -22,13 +22,13 @@ public class EnemyDamage : MonoBehaviour
 
     private void KillEnemy()
     {
-        GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
-        fx.transform.parent = parent;
+        Instantiate(deathFX, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
     private void ProcessHit()
     {
         hitpoints = hitpoints - 1;
+        hitParticles.Play();
     }
 }

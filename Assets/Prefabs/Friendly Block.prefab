@@ -93,7 +93,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356016987}
-  m_Text: 4,2
+  m_Text: -2,5
   m_OffsetZ: 0
   m_CharacterSize: 0.06
   m_LineSpacing: 1
@@ -213,8 +213,9 @@ GameObject:
   - component: {fileID: 7618071162254481587}
   - component: {fileID: 7636804959577608239}
   - component: {fileID: 6865844778659752706}
+  - component: {fileID: 3776800734605272779}
   m_Layer: 0
-  m_Name: 4,2
+  m_Name: Friendly Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -261,7 +262,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wasExplored: 0
+  isPlaceable: 1
+  towerWasPlaced: 0
   exploredFrom: {fileID: 0}
+  towerPrefab: {fileID: 7868858857502307155, guid: 2208c630b39f144009f507acc99aed00,
+    type: 3}
+--- !u!65 &3776800734605272779
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7618071162254481586}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: -5, z: 0}
 --- !u!1001 &1217849596202925902
 PrefabInstance:
   m_ObjectHideFlags: 0
