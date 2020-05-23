@@ -9,6 +9,7 @@ public class Tower : MonoBehaviour
     [SerializeField] ParticleSystem bullets = default;
     [SerializeField] float attackRange = 10f;
 
+    public Waypoint baseWaypoint = default;
 
     Transform targetEnemy = default;
 

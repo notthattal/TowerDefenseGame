@@ -13,7 +13,7 @@ public class Waypoint : MonoBehaviour
     public bool towerWasPlaced = false;
     public Waypoint exploredFrom = default;
 
-    [SerializeField] Tower towerPrefab = default;
+    [SerializeField] public Tower towerPrefab = default;
 
     public int GetGridSize()
     {
@@ -38,26 +38,13 @@ public class Waypoint : MonoBehaviour
         catch { }
     }
 
-    private void SpawnTowers()
-    {
-        if (towerWasPlaced == false && towerPrefab)
-        {
-            Instantiate(towerPrefab, transform.position, Quaternion.identity);
-            towerWasPlaced = true;
-        }
-        else
-        {
-            print("Cannot place tower here");
-        }
-    }
-
     void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0)) // Left click
         {
             if (isPlaceable)
             {
-                SpawnTowers();
+                FindObjectOfType<TowerFactory>().AddTower(this);
             }
             else
             {

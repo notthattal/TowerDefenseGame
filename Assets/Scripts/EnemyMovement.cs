@@ -6,6 +6,9 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
 
+    [SerializeField] float movementSpeed = 0.5f;
+    [SerializeField] ParticleSystem attackParticles = default;
+
     void Start()
     {
         PathFinder pathFinder = FindObjectOfType<PathFinder>();
@@ -13,13 +16,24 @@ public class EnemyMovement : MonoBehaviour
         StartCoroutine(FollowPath(path));
     }
 
+
+    private void AttackEnemyBase()
+    {
+        var vfx = Instantiate(attackParticles, transform.position, Quaternion.identity);
+        vfx.Play();
+        Destroy(gameObject);
+        Destroy(vfx.gameObject, vfx.main.duration);
+
+    }
+
     IEnumerator FollowPath(List<Waypoint> path)
     {
         foreach (Waypoint waypoint in path)
         {
             transform.position = waypoint.transform.position;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(movementSpeed);
         }
+        AttackEnemyBase();
     }
 
 }
